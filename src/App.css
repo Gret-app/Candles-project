@@ -1,0 +1,42 @@
+/* App.css */
+
+body {
+  font-family: Verdana;
+  background-color: #a4b4a9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+  margin-top: 50px;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.centered-header {
+  text-align: left; /* Wyśrodkowanie tekstu w poziomie */
+  margin: 20px 0; /* Dodanie marginesów dla odstępów */
+  margin-left: 20px;
+  font-size: 1.5em; /* Opcjonalnie: zmiana rozmiaru czcionki */
+  font-weight: bold; /* Opcjonalnie: pogrubienie tekstu */
+  color: #000000; /* Opcjonalnie: kolor tekstu */
+  font-family: Verdana;
+}

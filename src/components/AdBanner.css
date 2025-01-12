@@ -1,0 +1,35 @@
+.ad-banner {
+  display: flex;
+  flex-direction: column; /* Układ w kolumnie: obraz na górze, tekst na dole */
+  align-items: center;
+  justify-content: space-between; /* Odstęp między obrazem a tekstem */
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 10px; /* Usunięcie paddingu, aby lepiej dopasować zawartość */
+  text-align: center;
+  width: 1200px; /* Stała szerokość */
+  height: 400px; /* Stała wysokość */
+  margin: 20px auto; /* Wyśrodkowanie na stronie */
+  overflow: hidden; /* Ukrycie nadmiaru obrazu */
+  position: relative; /* Pozycjonowanie względem kontenera */
+}
+
+.ad-banner img {
+  width: 80%; /* Obraz wypełnia całą szerokość kontenera */
+  height: 90%; /* Obraz wypełnia prawie całą wysokość kontenera */
+  object-fit: fill; /* Rozciągnięcie obrazu, aby wypełnił cały kontener */
+  z-index: 0; /* Ustawienie obrazu pod tekstem */
+  object-fit: cover; /* Skalowanie obrazu bez zniekształceń */
+}
+
+.ad-banner p {
+  margin: 0; /* Usuń marginesy */
+  padding: 10px; /* Odstępy wewnętrzne dla czytelności */
+  font-size: 18px;
+  font-family: Verdana;
+  color: #000000;
+  width: 100%; /* Tekst wypełnia całą szerokość kontenera */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  position: absolute; /* Ustawienie absolutne */
+  bottom: 0; /* Pozycja na dole kontenera */
+}

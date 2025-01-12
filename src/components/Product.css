@@ -1,0 +1,61 @@
+.product-card {
+  position: relative; /* Umożliwia pozycjonowanie elementów wewnętrznych */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: visible; /* Zapobiega ucinaniu elementów */
+}
+
+.menu-container {
+  position: absolute;
+  top: 10px; /* Odległość od góry karty */
+  right: 10px; /* Odległość od lewej krawędzi karty */
+  z-index: 1000; /* Zapewnia wyświetlenie nad innymi elementami */
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: #070707; /* Kolor przycisku */
+}
+
+.menu-options {
+  position: absolute;
+  top: 30px; /* Pozycja menu względem przycisku */
+  left: 0;
+  background: #fff; /* Tło rozwijanego menu */
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1001; /* Większy z-index dla menu */
+}
+
+.menu-options button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menu-options button:hover {
+  background: #f0f0f0; /* Efekt hover */
+}
+
+.favorite-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.product-card.favorite {
+  border: 2px solid gold;
+  box-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
+}
