@@ -4,23 +4,21 @@
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
+    "html-webpack-plugin": "^5.6.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.0.2",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^4.2.4"
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^4.2.4",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -35,10 +33,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@eslint/js": "^9.18.0",
-    "eslint": "^8.57.1",
-    "eslint-plugin-react": "^7.37.3",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
     "globals": "^15.14.0"
   }
 }
