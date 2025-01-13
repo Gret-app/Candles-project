@@ -4,22 +4,21 @@
   align-items: center;
   justify-content: space-between; /* Odstęp między obrazem a tekstem */
   background-color: #f4f4f4;
-  border-radius: 10px;
-  padding: 10px; /* Usunięcie paddingu, aby lepiej dopasować zawartość */
   text-align: center;
-  width: 1200px; /* Stała szerokość */
   height: 400px; /* Stała wysokość */
-  margin: 20px auto; /* Wyśrodkowanie na stronie */
+
+  padding: 20px auto; /* Wyśrodkowanie na stronie */
   overflow: hidden; /* Ukrycie nadmiaru obrazu */
   position: relative; /* Pozycjonowanie względem kontenera */
 }
 
 .ad-banner img {
+  border-radius: 10px;
   width: 80%; /* Obraz wypełnia całą szerokość kontenera */
   height: 90%; /* Obraz wypełnia prawie całą wysokość kontenera */
-  object-fit: fill; /* Rozciągnięcie obrazu, aby wypełnił cały kontener */
+  object-fit: cover; /* Rozciągnięcie obrazu, aby wypełnił cały kontener */
+  position: absolute;
   z-index: 0; /* Ustawienie obrazu pod tekstem */
-  object-fit: cover; /* Skalowanie obrazu bez zniekształceń */
 }
 
 .ad-banner p {

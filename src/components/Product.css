@@ -48,14 +48,20 @@
 }
 
 .favorite-icon {
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
-.product-card.favorite {
-  border: 2px solid gold;
-  box-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
+.rating-update-button {
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #2d3748;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 15px;
 }

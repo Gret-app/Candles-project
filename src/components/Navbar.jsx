@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css"; // Import stylu
 import logo from "../assets/logo.png"; // Ścieżka do logo
 
@@ -8,10 +9,31 @@ function Navbar() {
     <div className="navbar">
       {/* Linki nawigacyjne */}
       <div className="nav-links">
-        <Link to="/">Strona Główna</Link>
-        <Link to="/bestsellery">Bestsellery</Link>
-        <Link to="/oferta">Oferta</Link>
-        <Link to="/dodaj">Dodaj Produkt</Link>
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Strona główna
+        </NavLink>
+        <NavLink
+          to="/bestsellery"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Bestsellery
+        </NavLink>
+        <NavLink
+          to="/oferta"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Oferta
+        </NavLink>
+        <NavLink
+          to="/dodaj"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Dodaj produkt
+        </NavLink>
       </div>
 
       {/* Logo i tytuł */}

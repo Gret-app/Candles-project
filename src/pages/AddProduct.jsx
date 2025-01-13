@@ -9,40 +9,36 @@ const AddProduct = ({ addCandle }) => {
     image: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+  // Obsługa zmian w polach formularza
+  const handleChange = ({ target: { name, value } }) => {
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  // Obsługa przesłania formularza
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const { name, price, rating, image } = formData;
 
-    if (name && price && rating && image) {
-      const newCandle = {
-        id: Date.now(),
-        name,
-        price: parseFloat(price),
-        rating: parseFloat(rating),
-        image,
-      };
+    console.log(formData);
 
-      // Alert informujący o dodaniu produktu
-      alert(`Produkt "${name}" został pomyślnie dodany do oferty!`);
-
-      addCandle(newCandle);
-      setFormData({
-        name: "",
-        price: "",
-        rating: "",
-        image: "",
-      });
-    } else {
-      alert("Wszystkie pola muszą być wypełnione.");
+    if (!name || !price || !rating || !image) {
+      return alert("Wszystkie pola muszą być wypełnione.");
     }
+
+    const newCandle = {
+      id: Date.now(),
+      name,
+      price: parseFloat(price),
+      rating: parseFloat(rating),
+      image,
+    };
+
+    alert(`Produkt "${name}" został pomyślnie dodany do oferty!`);
+    addCandle(newCandle);
+
+    // Reset formularza
+    setFormData({ name: "", price: "", rating: "", image: "" });
   };
 
   return (
@@ -50,54 +46,58 @@ const AddProduct = ({ addCandle }) => {
       <h2>Dodaj Nowy Produkt</h2>
       <form onSubmit={handleSubmit} className="add-product-form">
         <div className="form-group">
-          <label htmlFor="name">Nazwa:</label>
+          <label htmlFor="name">Nazwa</label>
           <input
-            type="text"
             id="name"
+            type="text"
             name="name"
             value={formData.name}
-            onChange={handleChange}
             placeholder="Wprowadź nazwę produktu"
+            onChange={handleChange}
           />
         </div>
+
         <div className="form-group">
-          <label htmlFor="price">Cena:</label>
+          <label htmlFor="price">Cena</label>
           <input
-            type="number"
             id="price"
+            type="number"
             name="price"
             value={formData.price}
-            onChange={handleChange}
             placeholder="Wprowadź cenę produktu"
             step="0.01"
             min="0"
+            onChange={handleChange}
           />
         </div>
+
         <div className="form-group">
-          <label htmlFor="rating">Ocena:</label>
+          <label htmlFor="rating">Ocena</label>
           <input
-            type="number"
             id="rating"
+            type="number"
             name="rating"
             value={formData.rating}
-            onChange={handleChange}
             placeholder="Wprowadź ocenę produktu (0-5)"
             step="0.1"
             min="0"
             max="5"
+            onChange={handleChange}
           />
         </div>
+
         <div className="form-group">
-          <label htmlFor="image">Adres URL Obrazu:</label>
+          <label htmlFor="image">Adres URL Obrazu</label>
           <input
-            type="text"
             id="image"
+            type="text"
             name="image"
             value={formData.image}
+            placeholder="Wprowadź adres URL obrazu"
             onChange={handleChange}
-            placeholder="Wprowadź URL obrazu produktu"
           />
         </div>
+
         <button type="submit" className="submit-button">
           Dodaj Produkt
         </button>

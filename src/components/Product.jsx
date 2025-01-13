@@ -10,32 +10,12 @@ const Product = ({
 }) => {
   const [newRating, setNewRating] = useState(candle.rating);
   const [isEditing, setIsEditing] = useState(false);
-  const [editData, setEditData] = useState({
-    name: candle.name,
-    price: candle.price,
-    rating: candle.rating,
-    image: candle.image,
-  });
+  const [editData, setEditData] = useState({ ...candle });
   const [menuVisible, setMenuVisible] = useState(false);
 
   const menuRef = useRef(null);
 
-  const handleRatingChange = () => {
-    updateRating(candle.id, parseFloat(newRating));
-  };
-
-  const handleDelete = () => {
-    deleteCandle(candle.id);
-    setMenuVisible(false);
-  };
-
-  const handleEdit = () => {
-    editCandle(candle.id, editData);
-    setIsEditing(false);
-    setMenuVisible(false);
-  };
-
-  // Zamknij menu po kliknięciu poza nim
+  // Obsługa kliknięcia poza menu
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -49,9 +29,30 @@ const Product = ({
     };
   }, []);
 
-  const handleFavoriteToggle = () => {
-    toggleFavorite(candle.id);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setEditData((prev) => ({
+      ...prev,
+      [name]: name === "price" || name === "rating" ? parseFloat(value) : value,
+    }));
   };
+
+  const handleRatingChange = () =>
+    updateRating(candle.id, parseFloat(newRating));
+
+  const handleFavoriteToggle = () => toggleFavorite(candle.id);
+
+  const handleDelete = () => {
+    deleteCandle(candle.id);
+    setMenuVisible(false);
+  };
+
+  const handleEdit = () => {
+    editCandle(candle.id, editData);
+    setIsEditing(false);
+    setMenuVisible(false);
+  };
+
   return (
     <div className="product-card">
       {/* Menu opcji */}
@@ -62,7 +63,6 @@ const Product = ({
         >
           ⋮
         </button>
-
         {menuVisible && (
           <div className="menu-options">
             <button onClick={() => setIsEditing(true)}>Edytuj</button>
@@ -72,7 +72,7 @@ const Product = ({
       </div>
 
       <div className="favorite-icon" onClick={handleFavoriteToggle}>
-        {candle.isFavorite ? "⭐" : "☆"}
+        {candle.isFavorite ? "★" : "☆"}
       </div>
 
       {!isEditing ? (
@@ -80,10 +80,10 @@ const Product = ({
           <img src={candle.image} alt={candle.name} className="product-image" />
           <h2>{candle.name}</h2>
           <p>Cena: {candle.price.toFixed(2)} zł</p>
-          <p>Ocena: {candle.rating} ⭐</p>
+          <p>Ocena: {candle.rating} ★ </p>
 
           {/* Sekcja oceniania */}
-          <div className="rating-update">
+          <div>
             <input
               type="number"
               value={newRating}
@@ -92,39 +92,35 @@ const Product = ({
               max="5"
               onChange={(e) => setNewRating(e.target.value)}
             />
-            <button onClick={handleRatingChange}>Oceń</button>
+            <button
+              className="rating-update-button"
+              onClick={handleRatingChange}
+            >
+              Oceń
+            </button>
           </div>
         </>
       ) : (
         <>
-          <input
-            type="text"
-            value={editData.name}
-            onChange={(e) => setEditData({ ...editData, name: e.target.value })}
-          />
-          <input
-            type="number"
-            value={editData.price}
-            onChange={(e) =>
-              setEditData({ ...editData, price: parseFloat(e.target.value) })
-            }
-          />
-          <input
-            type="number"
-            value={editData.rating}
-            onChange={(e) =>
-              setEditData({ ...editData, rating: parseFloat(e.target.value) })
-            }
-          />
-          <input
-            type="text"
-            value={editData.image}
-            onChange={(e) =>
-              setEditData({ ...editData, image: e.target.value })
-            }
-          />
-          <button onClick={handleEdit}>Zapisz</button>
-          <button onClick={() => setIsEditing(false)}>Anuluj</button>
+          {["name", "price", "rating", "image"].map((field) => (
+            <input
+              key={field}
+              type={field === "price" || field === "rating" ? "number" : "text"}
+              name={field}
+              value={editData[field]}
+              onChange={handleInputChange}
+              placeholder={`Wprowadź ${field}`}
+            />
+          ))}
+          <button className="rating-update-button" onClick={handleEdit}>
+            Zapisz
+          </button>
+          <button
+            className="rating-update-button"
+            onClick={() => setIsEditing(false)}
+          >
+            Anuluj
+          </button>
         </>
       )}
     </div>
