@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Online Candle Store - Pure Aura
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to Run the Project
 
-## Available Scripts
+1. Clone the repository:
 
-In the project directory, you can run:
+   #### `git clone https://github.com/your-repo/online-store.git`
 
-### `npm start`
+2. Navigate to the project directory:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   #### `cd online-store`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Install dependencies:
 
-### `npm test`
+   #### `npm install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Run the application in development mode:
 
-### `npm run build`
+   #### `npm start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. Open your browser and go to http://localhost:3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. To build the application for production, use the command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   #### `npm run build`
 
-### `npm run eject`
+## Project Description
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application is a simple online store for selling candles, developed using the React library. It allows users to browse products, mark them as favorites, edit, delete, and add new products.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Application Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Product Browsing**: View products in various categories.
+- **Favorites**: Mark products with a star as favorites.
+- **Adding Products**: A form to add new products to the list.
+- **Editing Products**: Modify existing products.
+- **Deleting Products**: Permanently remove products from the list.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### System Requirements
 
-## Learn More
+- Node.js (>=16.0.0)
+- npm (Node Package Manager)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Sample Data
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The application uses sample product data, which can be found in the file `src/data/candles.js`.
 
-### Code Splitting
+## Future Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Adding a shopping cart feature.
+- Backend implementation for data storage.
+- User registration and login system.
+- Integration with a payment system.
 
-### Analyzing the Bundle Size
+## Application Overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img src="https://github.com/user-attachments/assets/cba0b7fd-aa5c-44d4-a8a3-d64e74dc358d" width="100%" height="50%" />
 
-### Making a Progressive Web App
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Name**: Greta Krzyżanowska
+- **Contact**: greta.mik85@gmail.com
