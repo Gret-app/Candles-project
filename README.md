@@ -54,7 +54,7 @@ The application uses sample product data, which can be found in the file `src/da
 
 ## Application Overview
 
-<img src="https://github.com/user-attachments/assets/cba0b7fd-aa5c-44d4-a8a3-d64e74dc358d" width="100%" height="50%" />
+<img src="https://github.com/user-attachments/assets/59b4a716-6f32-49c9-a798-ae61c5d9b906" width="100%" height="50%" />
 
 ## Author
 
