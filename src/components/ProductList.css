@@ -1,6 +1,6 @@
 .product-list {
-  max-height: 100vh; /* Maksymalna wysokość kontenera */
-  padding: 10px; /* Opcjonalne marginesy wewnętrzne */
+  max-height: 100vh;
+  padding: 10px;
 }
 
 .products-grid {
@@ -26,7 +26,7 @@
   height: 300px;
   padding: 15px;
   border-radius: 10px;
-  object-fit: cover; /* Skalowanie obrazu bez zniekształceń */
+  object-fit: cover;
 }
 
 .product-card h2 {

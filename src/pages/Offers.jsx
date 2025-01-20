@@ -1,27 +1,17 @@
-// pages/Offers.jsx
 import React from "react";
-import ProductList from "../components/ProductList";
-import "../App.css";
+import ProductPage from "./ProductPage";
 
-const Offers = ({
-  candles,
-  updateRating,
-  toggleFavorite,
-  deleteCandle,
-  editCandle,
-}) => {
-  const offers = candles.filter((candle) => candle.rating < 4);
+const Offers = (props) => {
+  // Filtrowanie produktów o ocenie poniżej 4
+  const offers = props.candles.filter((candle) => candle.rating < 4);
 
   return (
-    <div className="offers">
-      <ProductList
-        candles={offers}
-        updateRating={updateRating}
-        toggleFavorite={toggleFavorite}
-        deleteCandle={deleteCandle}
-        editCandle={editCandle} // Przekazanie funkcji
-      />
-    </div>
+    <ProductPage
+      {...props} // Przekazujemy wszystkie inne propsy (updateRating, toggleFavorite itd.)
+      candles={offers} // Tylko przefiltrowane produkty
+      showSearchBar={false} // Wyłączamy pasek wyszukiwania
+      showAdBanner={false} // Wyłączamy baner reklamowy
+    />
   );
 };
 

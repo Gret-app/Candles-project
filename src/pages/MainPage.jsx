@@ -1,35 +1,22 @@
-/* eslint-disable no-const-assign */
 import React from "react";
-import ProductList from "../components/ProductList";
-import AdBanner from "../components/AdBanner";
-import SearchBar from "../components/SearchBar";
-import "../App.css";
+import ProductPage from "./ProductPage";
 
-const MainPage = ({
-  candles,
-  updateRating,
-  deleteCandle,
-  editCandle,
-  toggleFavorite,
-}) => {
-  // Pobieramy 5 najlepiej ocenianych produktów
+const MainPage = ({ candles, searchTerm, setSearchTerm, ...props }) => {
+  // Sortowanie i ograniczenie do 4 najlepszych świec
   const topCandles = candles
-    .sort((a, b) => b.rating - a.rating) // Sortujemy malejąco po ocenie
-    .slice(0, 5); // Pobieramy pierwsze 5 elementów
+    .sort((a, b) => b.rating - a.rating) // Sortowanie malejąco po ocenie
+    .slice(0, 4); // Pobieramy tylko 4 najlepsze
 
   return (
-    <div className="main-page">
-      <SearchBar />
-      <AdBanner />
-      <h2 className="header">Najlepiej oceniane produkty</h2>
-      <ProductList
-        candles={topCandles}
-        updateRating={updateRating}
-        deleteCandle={deleteCandle}
-        editCandle={editCandle}
-        toggleFavorite={toggleFavorite} // Przekazanie funkcji
-      />
-    </div>
+    <ProductPage
+      {...props}
+      candles={topCandles}
+      searchTerm={searchTerm}
+      setSearchTerm={setSearchTerm}
+      showSearchBar={true}
+      title="Najlepiej oceniane produkty"
+      showAdBanner={true}
+    />
   );
 };
 

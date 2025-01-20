@@ -1,33 +1,21 @@
 .search-bar {
   display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  background-color: #f4f4f4;
-}
-
-.search-bar form {
-  display: flex;
-  gap: 10px;
+  justify-content: center; /* Wyśrodkowanie w poziomie */
+  margin: 20px auto; /* Wyśrodkowanie na stronie z marginesami */
+  width: 100%; /* Upewnij się, że komponent rozciąga się na całą szerokość */
 }
 
 .search-bar input {
-  padding: 10px;
+  width: 50%; /* Dostosowanie szerokości paska wyszukiwania */
+  max-width: 600px; /* Maksymalna szerokość */
+  padding: 10px; /* Wewnętrzne odstępy */
   font-size: 16px;
-  border: 2px solid #2d3748;
+  border: 2px solid #ccc;
   border-radius: 5px;
-  width: 300px;
+  outline: none;
+  transition: border-color 0.3s;
 }
 
-.search-bar button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #2d3748;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.search-bar button:hover {
-  background-color: #4a5568;
+.search-bar input:focus {
+  border-color: #4caf50; /* Zmiana koloru obramowania na aktywnym */
 }

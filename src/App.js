@@ -6,9 +6,16 @@ import Offers from "./pages/Offers";
 import MainPage from "./pages/MainPage";
 import AddProduct from "./pages/AddProduct";
 import { candles as initialCandles } from "./data/candles";
+
 function App() {
   const [candles, setCandles] = useState(initialCandles);
 
+  const [searchTerm, setSearchTerm] = useState(""); // Przechowuj zapytanie wyszukiwania
+
+  // Filtrowanie świec na podstawie wpisanego tekstu
+  const filteredCandles = candles.filter((candle) =>
+    candle.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   const updateRating = (id, newRating) => {
     setCandles((prevCandles) =>
       prevCandles.map((candle) =>
@@ -52,11 +59,13 @@ function App() {
           path="/"
           element={
             <MainPage
-              candles={candles}
               updateRating={updateRating}
               deleteCandle={deleteCandle}
               editCandle={editCandle}
-              toggleFavorite={toggleFavorite} //
+              toggleFavorite={toggleFavorite}
+              candles={filteredCandles} // Przekazujemy przefiltrowane świece
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
             />
           }
         />
@@ -64,11 +73,13 @@ function App() {
           path="/bestsellery"
           element={
             <Bestsellers
-              candles={candles}
               updateRating={updateRating}
               deleteCandle={deleteCandle}
               editCandle={editCandle}
-              toggleFavorite={toggleFavorite} //
+              toggleFavorite={toggleFavorite}
+              candles={filteredCandles} // Przekazujemy przefiltrowane świece
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
             />
           }
         />
@@ -76,11 +87,13 @@ function App() {
           path="/oferta"
           element={
             <Offers
-              candles={candles}
               updateRating={updateRating}
               deleteCandle={deleteCandle}
               editCandle={editCandle}
-              toggleFavorite={toggleFavorite} //
+              toggleFavorite={toggleFavorite}
+              candles={filteredCandles} // Przekazujemy przefiltrowane świece
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
             />
           }
         />

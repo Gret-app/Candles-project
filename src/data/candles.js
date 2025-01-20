@@ -84,19 +84,11 @@ export const candles = [
     name: "Świeca Sojowa Cytrusowa",
     description: "Orzeźwiający zapach cytrusów.",
     price: 44.99,
-    rating: 4.0,
-    image: require("../assets/candle3.jpg"),
-  },
-  {
-    id: 12,
-    name: "Świeca Sojowa Cytrusowa",
-    description: "Orzeźwiający zapach cytrusów.",
-    price: 44.99,
     rating: 4.8,
     image: require("../assets/candle2.jpg"),
   },
   {
-    id: 13,
+    id: 12,
     name: "Świeca Sojowa Cytrusowa",
     description: "Orzeźwiający zapach cytrusów.",
     price: 44.99,
@@ -104,7 +96,7 @@ export const candles = [
     image: require("../assets/candle3.jpg"),
   },
   {
-    id: 14,
+    id: 13,
     name: "Świeca Sojowa Cytrusowa",
     description: "Orzeźwiający zapach cytrusów.",
     price: 44.99,
@@ -112,7 +104,7 @@ export const candles = [
     image: require("../assets/candle3.jpg"),
   },
   {
-    id: 15,
+    id: 14,
     name: "Świeca Sojowa Cytrusowa",
     description: "Orzeźwiający zapach cytrusów.",
     price: 44.99,
@@ -120,7 +112,7 @@ export const candles = [
     image: require("../assets/candle3.jpg"),
   },
   {
-    id: 16,
+    id: 15,
     name: "Świeca Sojowa Cytrusowa",
     description: "Orzeźwiający zapach cytrusów.",
     price: 44.99,
@@ -128,7 +120,7 @@ export const candles = [
     image: require("../assets/candle3.jpg"),
   },
   {
-    id: 17,
+    id: 16,
     name: "Świeca Sojowa Cytrusowa",
     description: "Orzeźwiający zapach cytrusów.",
     price: 44.99,
@@ -136,11 +128,19 @@ export const candles = [
     image: require("../assets/candle3.jpg"),
   },
   {
+    id: 17,
+    name: "Świeca Sojowa Cytrusowa",
+    description: "Orzeźwiający zapach cytrusów.",
+    price: 44.99,
+    rating: 3.3,
+    image: require("../assets/candle3.jpg"),
+  },
+  {
     id: 18,
     name: "Świeca Sojowa Cytrusowa",
     description: "Orzeźwiający zapach cytrusów.",
     price: 44.99,
-    rating: 3.1,
+    rating: 4.8,
     image: require("../assets/candle3.jpg"),
   },
   {
@@ -151,12 +151,13 @@ export const candles = [
     rating: 3.3,
     image: require("../assets/candle3.jpg"),
   },
+
   {
     id: 20,
     name: "Świeca Sojowa Cytrusowa",
     description: "Orzeźwiający zapach cytrusów.",
     price: 44.99,
-    rating: 4.8,
+    rating: 3.3,
     image: require("../assets/candle3.jpg"),
   },
   {
@@ -167,7 +168,6 @@ export const candles = [
     rating: 3.3,
     image: require("../assets/candle3.jpg"),
   },
-
   {
     id: 22,
     name: "Świeca Sojowa Cytrusowa",
@@ -198,7 +198,7 @@ export const candles = [
     description: "Orzeźwiający zapach cytrusów.",
     price: 44.99,
     rating: 3.3,
-    image: require("../assets/candle3.jpg"),
+    image: require("../assets/candle2.jpg"),
   },
   {
     id: 26,
@@ -206,7 +206,7 @@ export const candles = [
     description: "Orzeźwiający zapach cytrusów.",
     price: 44.99,
     rating: 3.3,
-    image: require("../assets/candle3.jpg"),
+    image: require("../assets/candle2.jpg"),
   },
   {
     id: 27,
@@ -218,22 +218,6 @@ export const candles = [
   },
   {
     id: 28,
-    name: "Świeca Sojowa Cytrusowa",
-    description: "Orzeźwiający zapach cytrusów.",
-    price: 44.99,
-    rating: 3.3,
-    image: require("../assets/candle2.jpg"),
-  },
-  {
-    id: 29,
-    name: "Świeca Sojowa Cytrusowa",
-    description: "Orzeźwiający zapach cytrusów.",
-    price: 44.99,
-    rating: 3.3,
-    image: require("../assets/candle2.jpg"),
-  },
-  {
-    id: 30,
     name: "Świeca Sojowa Cytrusowa",
     description: "Orzeźwiający zapach cytrusów.",
     price: 44.99,

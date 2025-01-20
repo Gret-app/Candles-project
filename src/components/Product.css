@@ -1,17 +1,17 @@
 .product-card {
-  position: relative; /* Umożliwia pozycjonowanie elementów wewnętrznych */
+  position: relative;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: visible; /* Zapobiega ucinaniu elementów */
+  overflow: visible;
 }
 
 .menu-container {
   position: absolute;
-  top: 10px; /* Odległość od góry karty */
-  right: 10px; /* Odległość od lewej krawędzi karty */
-  z-index: 1000; /* Zapewnia wyświetlenie nad innymi elementami */
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
 }
 
 .menu-toggle {
@@ -19,18 +19,18 @@
   border: none;
   font-size: 25px;
   cursor: pointer;
-  color: #070707; /* Kolor przycisku */
+  color: #070707;
 }
 
 .menu-options {
   position: absolute;
-  top: 30px; /* Pozycja menu względem przycisku */
+  top: 30px;
   left: 0;
-  background: #fff; /* Tło rozwijanego menu */
+  background: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  z-index: 1001; /* Większy z-index dla menu */
+  z-index: 1001;
 }
 
 .menu-options button {
@@ -44,7 +44,7 @@
 }
 
 .menu-options button:hover {
-  background: #f0f0f0; /* Efekt hover */
+  background: #f0f0f0;
 }
 
 .favorite-icon {

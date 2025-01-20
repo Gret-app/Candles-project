@@ -20,8 +20,6 @@ const AddProduct = ({ addCandle }) => {
 
     const { name, price, rating, image } = formData;
 
-    console.log(formData);
-
     if (!name || !price || !rating || !image) {
       return alert("Wszystkie pola muszą być wypełnione.");
     }

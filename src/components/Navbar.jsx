@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import "./Navbar.css"; // Import stylu
-import logo from "../assets/logo.png"; // Ścieżka do logo
+import "./Navbar.css";
+import logo from "../assets/logo.png";
 
 function Navbar() {
   return (

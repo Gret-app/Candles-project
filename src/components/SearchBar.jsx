@@ -1,27 +1,25 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
 
-function SearchBar() {
-  const [searchTerm, setSearchTerm] = useState("");
+const SearchBar = ({ onSearch }) => {
+  const [query, setQuery] = useState("");
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    alert(`Szukasz: ${searchTerm}`); // Zastąpić alert logiką wyszukiwania
+  const handleInputChange = (event) => {
+    const value = event.target.value;
+    setQuery(value);
+    onSearch(value); // Przekazuje wprowadzone dane do rodzica
   };
 
   return (
     <div className="search-bar">
-      <form onSubmit={handleSearch}>
-        <input
-          type="text"
-          placeholder="Wyszukaj produkt..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <button type="submit">Szukaj</button>
-      </form>
+      <input
+        type="text"
+        placeholder="Wyszukaj świeczkę..."
+        value={query}
+        onChange={handleInputChange}
+      />
     </div>
   );
-}
+};
 
 export default SearchBar;

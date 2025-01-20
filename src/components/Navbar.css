@@ -2,12 +2,12 @@
 .site-title {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #ffffff; /* Kolor tytułu */
+  color: #ffffff;
 }
 .logo-link {
   display: flex;
   align-items: center;
-  text-decoration: none; /* Usunięcie podkreślenia linku */
+  text-decoration: none;
 }
 
 /* Styl dla logo */
@@ -19,30 +19,30 @@
 
 /* Styl dla kontenera nawigacji */
 .navbar {
-  background-color: #2c3a33; /* Kolor tła */
+  background-color: #2c3a33;
   height: 300px;
 }
 /* Styl dla linków */
 .nav-links {
   margin-top: -10px;
-  display: flex; /* Ustaw linki w jednej linii */
-  gap: 50px; /* Odstęp między linkami */
-  justify-content: center; /* Wyśrodkowuje linki w poziomie */
+  display: flex;
+  gap: 50px;
+  justify-content: center;
   height: 50px;
-  width: 100%; /* Rozciągnij linki na całą szerokość */
-  background-color: #485d56; /* Tło tylko dla linków */
-  padding: 12px; /* Wewnętrzne odstępy linków */
+  width: 100%;
+  background-color: #485d56;
+  padding: 12px;
 }
 .nav-links a {
-  text-decoration: none; /* Usuń podkreślenie */
-  color: white; /* Kolor tekstu */
-  font-weight: bold; /* Grubszy tekst */
-  font-size: 22px; /* Rozmiar tekstu */
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
   font-family: Verdana;
 }
 
 .nav-links a:hover {
-  color: #e2e8f0; /* Kolor linku po najechaniu */
+  color: #e2e8f0;
   text-decoration: underline;
 }
 .navbar .active-link {
@@ -54,7 +54,7 @@
 .social-media {
   position: relative;
   top: 0px;
-  right: 30px; /* Odległość od prawej krawędzi */
+  right: 30px;
 }
 .social-media a {
   margin: 0 10px;
