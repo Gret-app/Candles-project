@@ -10,7 +10,7 @@ import { candles as initialCandles } from "./data/candles";
 function App() {
   const [candles, setCandles] = useState(initialCandles);
 
-  const [searchTerm, setSearchTerm] = useState(""); // Przechowuj zapytanie wyszukiwania
+  const [searchTerm, setSearchTerm] = useState(""); 
 
   // Filtrowanie świec na podstawie wpisanego tekstu
   const filteredCandles = candles.filter((candle) =>

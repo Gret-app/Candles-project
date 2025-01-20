@@ -17,7 +17,7 @@ function AdBanner() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentAdIndex((prevIndex) => (prevIndex + 1) % ads.length);
-    }, 10000); // Zmiana co 10 sekund
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 

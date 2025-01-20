@@ -7,7 +7,7 @@ const SearchBar = ({ onSearch }) => {
   const handleInputChange = (event) => {
     const value = event.target.value;
     setQuery(value);
-    onSearch(value); // Przekazuje wprowadzone dane do rodzica
+    onSearch(value);
   };
 
   return (
