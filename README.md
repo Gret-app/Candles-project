@@ -60,3 +60,4 @@ The application uses sample product data, which can be found in the file `src/da
 
 - **Name**: Greta Krzyżanowska
 - **Contact**: greta.mik85@gmail.com
+- © 2025 Greta Krzyżanowska. Wszelkie prawa zastrzeżone.
