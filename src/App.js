@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Bestsellers from "./pages/Bestsellers";
@@ -6,16 +6,23 @@ import Offers from "./pages/Offers";
 import MainPage from "./pages/MainPage";
 import AddProduct from "./pages/AddProduct";
 import { candles as initialCandles } from "./data/candles";
+import app from "./data/firebaseConfig";
+import Register from "./components/Register.jsx";
+import Login from "./components/Login.jsx";
 
 function App() {
-  const [candles, setCandles] = useState(initialCandles);
+  useEffect(() => {
+    console.log("Firebase działa!", app);
+  }, []);
 
-  const [searchTerm, setSearchTerm] = useState(""); 
+  const [candles, setCandles] = useState(initialCandles);
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Filtrowanie świec na podstawie wpisanego tekstu
   const filteredCandles = candles.filter((candle) =>
     candle.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
   const updateRating = (id, newRating) => {
     setCandles((prevCandles) =>
       prevCandles.map((candle) =>
@@ -51,6 +58,7 @@ function App() {
   const addCandle = (newCandle) => {
     setCandles((prevCandles) => [...prevCandles, newCandle]);
   };
+
   return (
     <Router>
       <Navbar />
@@ -63,7 +71,7 @@ function App() {
               deleteCandle={deleteCandle}
               editCandle={editCandle}
               toggleFavorite={toggleFavorite}
-              candles={filteredCandles} // Przekazujemy przefiltrowane świece
+              candles={filteredCandles}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
             />
@@ -77,7 +85,7 @@ function App() {
               deleteCandle={deleteCandle}
               editCandle={editCandle}
               toggleFavorite={toggleFavorite}
-              candles={filteredCandles} // Przekazujemy przefiltrowane świece
+              candles={filteredCandles}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
             />
@@ -91,14 +99,15 @@ function App() {
               deleteCandle={deleteCandle}
               editCandle={editCandle}
               toggleFavorite={toggleFavorite}
-              candles={filteredCandles} // Przekazujemy przefiltrowane świece
+              candles={filteredCandles}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
             />
           }
         />
-
         <Route path="/dodaj" element={<AddProduct addCandle={addCandle} />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );

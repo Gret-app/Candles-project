@@ -1,0 +1,62 @@
+/* PRZYCISK ZALOGUJ W FORMULARZU LOGOWANIA */
+.login-button {
+  display: block;
+  width: 100%;
+  background: #2c3a33;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.login-button:hover {
+  background: #485d56; /* Ciemniejszy odcień pomarańczowego po najechaniu */
+  color: #fff;
+  transform: scale(1.05); /* Delikatne powiększenie przy najechaniu */
+}
+
+.login-button:active {
+  background: #485d56; /* Kolor po kliknięciu */
+  transform: scale(0.95); /* Delikatne zmniejszenie przy kliknięciu */
+}
+/* KONTENER FORMULARZA LOGOWANIA */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* GRUPY FORMULARZA */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* WIADOMOŚĆ O BŁĘDZIE */
+.error-message {
+  color: #485d56;
+  font-weight: bold;
+  margin-top: 10px;
+}
